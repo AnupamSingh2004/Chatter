@@ -3,15 +3,13 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Auth from "@/pages/Auth/auth.jsx";
 import Profile from "@/pages/Profile/profile.jsx";
 import Chat from "@/pages/Chat/chat.jsx";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
-import {useAppStore} from "@/store/index.js";
+
 
 function App() {
 
-
-    const {setUserData} = useAppStore();
-
+    const [userdata, setUserData] = useState({});
     const getUserData = async () => {
 
         try {
@@ -27,7 +25,6 @@ function App() {
 
     useEffect(() => {
         getUserData();
-        console.log(setUserData);
     }, []);
 
 
