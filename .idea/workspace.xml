@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b41a7b8c-aa16-4578-ade6-2539d22a21c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/src/store/atoms/userdata.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/src/store/selectors/userEmail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Auth/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Auth/auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/lib/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +93,7 @@
       <workItem from="1723805286863" duration="6971000" />
       <workItem from="1723955855045" duration="2204000" />
       <workItem from="1723962040193" duration="2006000" />
-      <workItem from="1723964052947" duration="16877000" />
+      <workItem from="1723964052947" duration="18915000" />
     </task>
     <servers />
   </component>
