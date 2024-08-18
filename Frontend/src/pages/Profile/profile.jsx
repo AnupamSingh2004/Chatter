@@ -1,48 +1,28 @@
-import {useEffect, useState} from "react";
-import axios from "axios";
+import {useRecoilState} from "recoil";
+import {userState} from "@/store/atoms/userdata.js";
+import {IoArrowBack} from "react-icons/io5";
+
 
 const Profile = () => {
 
-    const [userdata, setUserdata] = useState({});
-    console.log(userdata);
-
-    const getUserData = async () => {
-        try {
-            const response = await axios.get('http://localhost:6005/login/sucess', {withCredentials: true});
-            console.log("response", response);
-            setUserdata(response.data.user);
-        } catch (err) {
-            console.log(err);
-        }
-    }
-
-
-    useEffect(() => {
-        getUserData();
-    }, []);
 
     function logout() {
         window.open("http://localhost:6005/logout", "_self");
     }
 
-    return (
-        <>
-            {Object.keys(userdata).length > 0 ? (
-                <div>
-                    <div className={"font-bold text-3xl"}>{userdata?.displayName}</div>
-                    <div className={"p-5"}>
-                        <img className={"rounded-full"} src={userdata?.image} alt="profile photo is there"/>
 
-                    </div>
-                    <button className={"p-5 bg-blue-950 text-white rounded-xl"} onClick={logout}>logout</button>
-                </div>
+    // const {userInfo} = useAppStore();
+    const userData = useRecoilState(userState);
 
-            ) : <div>
-                <button className={"p-5 bg-blue-950 text-white rounded-xl"}>Login</button>
+
+    return <div className={"bg-[#1b1c24] h-[100vh] flex items-center justify-center flex-col gap-10"}>
+        <div className={"flex flex-col gap-10 w-[80vw] md:w-max"}>
+            <div>
+                <IoArrowBack className={"text-4xl lg:text-6xl text-white/90 cursor-pointer"}/>
             </div>
+        </div>
+    </div>
 
-            }
-        </>
-    )
+
 }
 export default Profile

@@ -1,29 +1,26 @@
-import {useEffect, useState} from "react";
-import axios from "axios";
 import {Button} from "@/components/ui/button.jsx";
+import {useRecoilState} from "recoil";
+import {userState} from "@/store/atoms/userdata.js";
 
 const Chat = () => {
-    const [userdata, setUserdata] = useState({});
-    console.log(userdata);
 
-    const getUserData = async () => {
-        try {
-            const response = await axios.get('http://localhost:6005/login/sucess', {withCredentials: true});
-            console.log("response", response);
-            setUserdata(response.data.user);
-        } catch (err) {
-            console.log(err);
-        }
+    function logout() {
+        window.open("http://localhost:6005/logout", "_self");
+        userData(null);
     }
 
 
-    useEffect(() => {
-        getUserData();
-    }, []);
+    const userData = useRecoilState(userState);
+
     return (
         <>
-            {Object.keys(userdata).length > 0 ? (
-                <div>Chat</div>
+            {userData[0].displayName ? (
+                <div>Chat
+                    <div>{userData[0].image}</div>
+                    <button onClick={logout}>
+                        Logout
+                    </button>
+                </div>
 
             ) : <Button>login</Button>
 
@@ -31,4 +28,6 @@ const Chat = () => {
         </>
     )
 }
+
+
 export default Chat

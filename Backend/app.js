@@ -84,8 +84,10 @@ app.get("/login/sucess", async (req, res) => {
 
     if (req.user) {
         res.status(200).json({message: "User Logged in", user: req.user});
+        return res.status(200);
     } else {
         res.status(400).json({message: "No user logged in"});
+        return res.status(404);
     }
 })
 
