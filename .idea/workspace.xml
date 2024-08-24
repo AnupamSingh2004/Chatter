@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b41a7b8c-aa16-4578-ade6-2539d22a21c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/store/atoms/userdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/store/atoms/userdata.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +98,7 @@
       <workItem from="1724394644680" duration="352000" />
       <workItem from="1724395588945" duration="6808000" />
       <workItem from="1724475277280" duration="2656000" />
-      <workItem from="1724484605398" duration="6942000" />
+      <workItem from="1724484605398" duration="8075000" />
     </task>
     <servers />
   </component>

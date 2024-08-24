@@ -4,11 +4,12 @@ import {IoArrowBack} from "react-icons/io5";
 import {Avatar} from "@radix-ui/react-avatar";
 import {AvatarImage} from "@/components/ui/avatar.jsx";
 import {useEffect, useState} from "react";
-import {getColor} from "@/lib/utils.js";
+import {colors, getColor} from "@/lib/utils.js";
 import {selectUserEmail} from "@/store/selectors/userEmail.js";
 import {useAppStore} from "@/store/index.js";
 import {useNavigate} from "react-router-dom";
 import {FaPlus, FaTrash} from "react-icons/fa";
+import {Input} from "@/components/ui/input.jsx";
 
 
 const Profile = () => {
@@ -17,6 +18,7 @@ const Profile = () => {
 
 
     const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [image, setImage] = useState(null);
     const [selectedColor, setSelectedColor] = useState(0);
     const [hovered, setHovered] = useState(false);
@@ -69,14 +71,49 @@ const Profile = () => {
                         }
                     </Avatar>
                     {
-                        hovered &&
-                        <div
-                            className={"absolute inset-0 flex items-center justify-center bg-black/50 ring-fuchsia-50 rounded-full"}>
-                            {image ? <FaTrash className={"text-white text-3xl cursor-pointer"}/> :
-                                <FaPlus className={"text-white text-3xl cursor-pointer"}/>}
-                        </div>
-                    }
+                        hovered && (
+                            <div
+                                className={"absolute inset-0 flex items-center justify-center bg-black/50 ring-fuchsia-50 rounded-full"}>
+                                {image ? <FaTrash className={"text-white text-3xl cursor-pointer"}/> :
+                                    <FaPlus className={"text-white text-3xl cursor-pointer"}/>
+                                }
+                            </div>
+                        )}
+                </div>
+                <div className="flex min-w-32 md:min-w-64  flex-col gap-5 text-white items-center justify-center">
+                    <div className="w-full">
+                        <Input
+                            placeholder={"Email"}
+                            type={"email"}
+                            disabled
+                            value={userInfo.email}
+                            className={"rounded-lg p-6 bg-[#2c2e3b] border-none"}
+                        />
+                        <div className="w-full">
 
+                            <Input
+                                placeholder={"Full Name"}
+                                type={"text"}
+                                value={firstName}
+                                className={"rounded-lg p-6 bg-[#2c2e3b] border-none mt-5 mb-5"}
+                            />
+                        </div>
+
+                        <div className="w-full flex gap-5">
+                            {
+                                colors.map((color, index) => (
+                                    // eslint-disable-next-line react/jsx-key
+                                    <div
+                                        className={`${color} h-8 w-8 rounded-full cursor-pointer transition-all duration-300`}
+                                        key={index}>
+
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>
