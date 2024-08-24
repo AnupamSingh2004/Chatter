@@ -8,8 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/store/atoms/userdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/store/atoms/userdata.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,23 +40,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/anupam/code/hkiratProjects/week-1-checkpoint-1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rearrange.code.on.save": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/home/anupam/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/anupam/code/Projects/ChatApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/anupam/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -93,7 +95,15 @@
       <workItem from="1723805286863" duration="6971000" />
       <workItem from="1723955855045" duration="2204000" />
       <workItem from="1723962040193" duration="2006000" />
-      <workItem from="1723964052947" duration="18915000" />
+      <workItem from="1723964052947" duration="23777000" />
+      <workItem from="1724152894068" duration="3419000" />
+      <workItem from="1724179172082" duration="3382000" />
+      <workItem from="1724339108317" duration="1471000" />
+      <workItem from="1724391388493" duration="3249000" />
+      <workItem from="1724394644680" duration="352000" />
+      <workItem from="1724395588945" duration="6808000" />
+      <workItem from="1724475277280" duration="2656000" />
+      <workItem from="1724484605398" duration="6942000" />
     </task>
     <servers />
   </component>

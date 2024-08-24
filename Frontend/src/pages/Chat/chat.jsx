@@ -1,31 +1,26 @@
 import {Button} from "@/components/ui/button.jsx";
 import {useRecoilState} from "recoil";
 import {userState} from "@/store/atoms/userdata.js";
+import {useAppStore} from "@/store/index.js";
+import {useNavigate} from "react-router-dom";
+import {useEffect} from "react";
+import {toast} from "react-toast";
 
 const Chat = () => {
 
-    function logout() {
-        window.open("http://localhost:6005/logout", "_self");
-        userData(null);
-    }
 
+    const {userInfo} = useAppStore();
+    const navigate = useNavigate();
 
-    const userData = useRecoilState(userState);
+    useEffect(() => {
+        if (userInfo.displayName) {
+            toast("Please Login");
+            navigate("/auth");
+        }
+    }, [userInfo, navigate]);
 
     return (
-        <>
-            {userData[0].displayName ? (
-                <div>Chat
-                    <div>{userData[0].image}</div>
-                    <button onClick={logout}>
-                        Logout
-                    </button>
-                </div>
-
-            ) : <Button>login</Button>
-
-            }
-        </>
+        <div>Chat</div>
     )
 }
 

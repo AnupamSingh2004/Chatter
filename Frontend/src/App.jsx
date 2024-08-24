@@ -1,93 +1,83 @@
 import './App.css'
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import Auth from "@/pages/Auth/auth.jsx";
 import Profile from "@/pages/Profile/profile.jsx";
 import Chat from "@/pages/Chat/chat.jsx";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 import {RecoilRoot, useRecoilState, useSetRecoilState} from "recoil";
 import {userState} from "@/store/atoms/userdata.js";
+import {useAppStore} from "@/store/index.js";
 
 
 function App() {
 
-    const setUserData = useSetRecoilState(userState);
-    const userdata = useRecoilState(userState);
-    useEffect(() => {
+    const {userInfo, setUserInfo} = useAppStore();
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
         const getUserData = async () => {
+
             try {
                 const response = await axios.get('http://localhost:6005/login/sucess', {withCredentials: true});
-                if (response.status === 200 && response.data.id) {
-                    setUserData(response.data.user);
+                console.log("response", response);
+                if (response.status === 200 && response.data.user) {
+                    setUserInfo(response.data.user);
                 } else {
-                    setUserData(null);
+                    setUserInfo(undefined);
                 }
-                // eslint-disable-next-line no-unused-vars
-            } catch (error) {
-                setUserData(null);
+            } catch (err) {
+                setUserInfo(undefined);
+                console.log(err);
+            } finally {
+                setLoading(false);
             }
         };
-        if (!userdata) {
-            getUserData();
-        }
+        if (!userInfo) {
 
-    }, [userdata, setUserData]);
+            getUserData();
+        } else {
+            setLoading(false);
+        }
+    }, [userInfo, setUserInfo]);
+
+    if (loading) {
+        return <div>Loading.....</div>;
+    }
 
 
     return (
         <RecoilRoot>
-            <div>
-                <BrowserRouter>
 
-                    <InitUser/>
-                    <Routes>
-                        <Route path="/auth" element={
-
-                            <Auth/>
+            <BrowserRouter>
 
 
-                        }/>
-                        {/*<Route path="*" element={<Auth/>}/>*/}
-                        <Route path={"/profile"} element={
+                <Routes>
+                    <Route path="/login" element={
 
-                            <Profile/>
 
-                        }/>
-                        <Route path={"/Chat"} element={
+                        <Auth/>
 
-                            <Chat/>
 
-                        }/>
-                    </Routes>
-                </BrowserRouter>
-            </div>
+                    }/>
+                    {/*<Route path="*" element={<Auth/>}/>*/}
+                    <Route path={"/profile"} element={
+
+                        <Profile/>
+
+
+                    }/>
+                    <Route path={"/Chat"} element={
+
+                        <Chat/>
+
+
+                    }/>
+                </Routes>
+            </BrowserRouter>
         </RecoilRoot>
     )
 }
 
-function InitUser() {
-
-
-    const setUserData = useSetRecoilState(userState);
-
-
-    const getUserData = async () => {
-
-        try {
-            const response = await axios.get('http://localhost:6005/login/sucess', {withCredentials: true});
-            // console.log("response", response);
-            setUserData(response.data.user);
-
-
-        } catch (err) {
-            console.log(err);
-        }
-    }
-
-    useEffect(() => {
-        getUserData();
-    }, []);
-}
 
 export default App
