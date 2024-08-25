@@ -101,6 +101,16 @@ app.get("/logout", (req, res, next) => {
 })
 
 
+app.put("/changeProfile/:courseid", async (req, res) => {
+    const user = await userdb.findByIdAndUpdate(req.params.courseid, req.body, {new: true});
+    if (!user) {
+        return res.status(404).json({message: "User not found"});
+    } else {
+        return res.status(200).json({message: "User updated successfully"});
+    }
+})
+
+
 app.listen(PORT, () => {
     console.log(`server start at port no ${PORT}`)
 })

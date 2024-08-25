@@ -21,7 +21,7 @@ function App() {
             try {
                 const response = await axios.get('http://localhost:6005/login/sucess', {withCredentials: true});
                 console.log("response", response);
-                if (response.status === 200 && response.data.user) {
+                if (response.status === 200) {
                     setUserInfo(response.data.user);
                 } else {
                     setUserInfo(undefined);

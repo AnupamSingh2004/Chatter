@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b41a7b8c-aa16-4578-ade6-2539d22a21c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Models/userSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Models/userSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +52,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/anupam/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -98,7 +103,8 @@
       <workItem from="1724394644680" duration="352000" />
       <workItem from="1724395588945" duration="6808000" />
       <workItem from="1724475277280" duration="2656000" />
-      <workItem from="1724484605398" duration="8075000" />
+      <workItem from="1724484605398" duration="15176000" />
+      <workItem from="1724565516345" duration="1993000" />
     </task>
     <servers />
   </component>
