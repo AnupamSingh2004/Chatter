@@ -8,6 +8,9 @@ export const ContactsContainer = () => {
         <div className="my-5">
             <Title text={"Direct Messages"}/>
         </div>
+        <div className="my-5 mt-7">
+            <Title text={"Groups"}/>
+        </div>
 
     </div>
 
