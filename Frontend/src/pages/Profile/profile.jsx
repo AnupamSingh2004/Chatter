@@ -3,7 +3,7 @@ import {userState} from "@/store/atoms/userdata.js";
 import {IoArrowBack} from "react-icons/io5";
 import {Avatar} from "@radix-ui/react-avatar";
 import {AvatarImage} from "@/components/ui/avatar.jsx";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {colors, getColor} from "@/lib/utils.js";
 import {selectUserEmail} from "@/store/selectors/userEmail.js";
 import {useAppStore} from "@/store/index.js";
@@ -21,18 +21,19 @@ const Profile = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [image, setImage] = useState(null);
-    const [selectedColor, setSelectedColor] = useState(0);
+    const [selectedColor, setSelectedColor] = useState(3);
     const [hovered, setHovered] = useState(false);
-
+    const fileInputRef = useRef(null);
 
     const {userInfo, setUserInfo} = useAppStore();
     console.log(userInfo);
 
     useEffect(() => {
-        if (userInfo.displayName) {
+        if (userInfo) {
             setFirstName(userInfo.displayName);
             setSelectedColor(userInfo.color);
         }
+
     }, [userInfo]);
 
 
@@ -67,11 +68,13 @@ const Profile = () => {
                         color: selectedColor,
                     });
                     toast.success("Profile saved successfully.");
+
+                    navigate("/chat");
                 } else {
                     toast.error("Profile does not exist");
                 }
 
-                let updatedCourse = {
+                let updatedInfo = {
                     _id: userInfo._id,
                     displayName: firstName,
                     color: selectedColor,
@@ -80,14 +83,28 @@ const Profile = () => {
                     profileSetup: true,
                 };
 
-                setUserInfo(updatedCourse);
+                setUserInfo(updatedInfo);
+                setFirstName(userInfo.displayName);
+                setSelectedColor(userInfo.color);
             } catch (e) {
                 console.log(e);
             }
         }
     }
 
+    const handleFileInputClick = () => {
+        fileInputRef.current.click();
+    }
 
+    const handleImageChange = async (event) => {
+        const file = event.target.files[0];
+        console.log({file});
+
+    }
+
+    const handleDeleteImage = async (event) => {
+
+    }
     // const {userInfo} = useAppStore();
     // const userData = useRecoilState(userState);
 
@@ -115,19 +132,22 @@ const Profile = () => {
                                     className={`uppercase h-32 w-32 md:w-48 md:h-48 text-5xl border-[1px] flex justify-center items-center rounded-full ${getColor(selectedColor)} `}
                                 >
 
-                                    {firstName ? firstName.split("").shift() : userInfo.email.split("").shift()}
+                                    {firstName ? firstName.split("").shift() : userInfo.displayName.split("").shift()}
                                 </div>)
                         }
                     </Avatar>
                     {
                         hovered && (
                             <div
-                                className={"absolute inset-0 flex items-center justify-center bg-black/50 ring-fuchsia-50 rounded-full"}>
+                                className={"absolute inset-0 flex items-center justify-center bg-black/50 ring-fuchsia-50 rounded-full"}
+                                onClick={image ? handleDeleteImage : handleFileInputClick}>
                                 {image ? <FaTrash className={"text-white text-3xl cursor-pointer"}/> :
                                     <FaPlus className={"text-white text-3xl cursor-pointer"}/>
                                 }
                             </div>
                         )}
+                    <input type={"file"} ref={fileInputRef} className={"hidden"} onChange={handleImageChange}
+                           name={"profile-image"} accept=".png, .jpg, .jpeg, .svg, .webp"/>
                 </div>
                 <div className="flex min-w-32 md:min-w-64  flex-col gap-5 text-white items-center justify-center">
                     <div className="w-full">
@@ -143,7 +163,7 @@ const Profile = () => {
                             <Input
                                 placeholder={"Full Name"}
                                 type={"text"}
-                                // value={firstName}
+                                value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
                                 className={"rounded-lg p-6 bg-[#2c2e3b] border-none mt-5 mb-5 text-md"}
                             />
@@ -155,7 +175,7 @@ const Profile = () => {
                                     // eslint-disable-next-line react/jsx-key
                                     <div
                                         className={`${color} h-8 w-8 rounded-full cursor-pointer transition-all duration-300
-                                        ${selectedColor === index ? "outline outline-white/60 outline-1" : ""}`}
+                                                                        ${selectedColor === index ? "outline outline-white/60 outline-1" : ""}`}
                                         key={index}
                                         onClick={() => setSelectedColor(index)}
                                     ></div>
