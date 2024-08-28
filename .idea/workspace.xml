@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b41a7b8c-aa16-4578-ade6-2539d22a21c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/empty-chat-containers/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Auth/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Auth/auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,7 @@
       <workItem from="1724651724943" duration="1168000" />
       <workItem from="1724656730809" duration="3966000" />
       <workItem from="1724759525544" duration="3019000" />
-      <workItem from="1724770431611" duration="7688000" />
+      <workItem from="1724770431611" duration="8015000" />
     </task>
     <servers />
   </component>
