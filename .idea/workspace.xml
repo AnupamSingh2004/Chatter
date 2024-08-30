@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b41a7b8c-aa16-4578-ade6-2539d22a21c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/profile-info/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/new-dm/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Auth/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Auth/auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/message-bar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/message-bar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/profile-info/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/profile-info/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/empty-chat-containers/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/empty-chat-containers/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +119,7 @@
       <workItem from="1724899830331" duration="4280000" />
       <workItem from="1724917908373" duration="8867000" />
       <workItem from="1724985859529" duration="5654000" />
+      <workItem from="1725029342802" duration="6239000" />
     </task>
     <servers />
   </component>

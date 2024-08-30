@@ -25,7 +25,7 @@ const Logo = () => {
     return (
         <div className="flex flex-row cursor-pointers ">
             <img src="../../../../public/Chatter.png" alt="Logo" className={"h-56 w-56 cursor-pointer"}/>
-            <div className={"poppins-medium pt-14 text-8xl font-bold ml-[-10px] cursor-pointer text-white"}>Chatters
+            <div className={"poppins-medium pt-14 text-8xl font-bold ml-[-10px] cursor-pointer text-white"}>Chatter
             </div>
         </div>
     )

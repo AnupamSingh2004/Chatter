@@ -1,4 +1,5 @@
 import {ProfileInfo} from "@/pages/Chat/contacts-container/components/profile-info/index.jsx";
+import {NewDm} from "@/pages/Chat/contacts-container/components/new-dm/index.jsx";
 
 export const ContactsContainer = () => {
     return <div
@@ -8,7 +9,11 @@ export const ContactsContainer = () => {
         </div>
 
         <div className="my-5">
-            <Title text={"Direct Messages"}/>
+            <div className="flex items-center justify-between pr-10">
+
+                <Title text={"Direct Messages"}/>
+                <NewDm/>
+            </div>
         </div>
         <div className="my-5 mt-7">
             <Title text={"Groups"}/>

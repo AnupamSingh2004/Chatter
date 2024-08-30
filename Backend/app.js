@@ -111,6 +111,37 @@ app.put("/changeProfile/:courseid", async (req, res) => {
 })
 
 
+app.post("/search", async (req, res, next) => {
+    try {
+        const {searchTerm} = req.body;
+
+        if (searchTerm === undefined || searchTerm === null) {
+            return res.status(400).json({message: "No search term"});
+        }
+
+        const sanitizedTerm = searchTerm.replace(
+            /[.*+?^${}()|[\]\\]/g,
+            "\\$&"
+        );
+
+        const regex = new RegExp(sanitizedTerm, "i");
+
+        const contacts = await userdb.find({
+            $and: [
+                {_id: {$ne: req.user.id}},
+                {
+                    $or: [{displayName: regex}, {email: regex}],
+                }
+            ]
+        })
+
+        return res.status(200).json({contacts});
+    } catch (e) {
+        console.log(e);
+        return res.status(500).send("Internal Server Error");
+    }
+})
+
 app.listen(PORT, () => {
     console.log(`server start at port no ${PORT}`)
 })

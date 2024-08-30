@@ -57,7 +57,7 @@ export const ProfileInfo = () => {
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger>
-                            <IoPowerSharp className={"text-purple-500 hover:text-purple-700 text-xl font-medium"}
+                            <IoPowerSharp className={"text-red-400 hover:text-red-500 text-xl font-medium"}
                                           onClick={logout}
                             />
                         </TooltipTrigger>
