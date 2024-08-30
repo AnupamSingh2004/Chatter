@@ -1,3 +1,5 @@
+import {ProfileInfo} from "@/pages/Chat/contacts-container/components/profile-info/index.jsx";
+
 export const ContactsContainer = () => {
     return <div
         className={"relative md:w-[35vw] lg:w-[30vw] xl:w-[20vw] bg-[#1b1c24] border-r-2 border-[#2f303b]"}>
@@ -11,6 +13,7 @@ export const ContactsContainer = () => {
         <div className="my-5 mt-7">
             <Title text={"Groups"}/>
         </div>
+        <ProfileInfo/>
 
     </div>
 
