@@ -26,7 +26,7 @@ const Profile = () => {
     const fileInputRef = useRef(null);
 
     const {userInfo, setUserInfo} = useAppStore();
-    console.log(userInfo);
+
 
     useEffect(() => {
         if (userInfo) {

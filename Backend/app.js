@@ -8,6 +8,7 @@ const session = require("express-session");
 const passport = require("passport");
 const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 const userdb = require("./Models/userSchema");
+const setupSocket = require("./socket.js");
 
 const clientid = process.env.CLIENT_ID
 const clientsecret = process.env.CLIENT_SECRET
@@ -39,7 +40,7 @@ passport.use(
             scope: ["profile", "email"]
         },
         async (accessToken, refreshToken, profile, done) => {
-            console.log("profile", profile);
+            // console.log("profile", profile);
             try {
                 let user = await userdb.findOne({googleId: profile.id});
 
@@ -80,7 +81,7 @@ app.get("/auth/google/callback", passport.authenticate("google", {
 
 
 app.get("/login/sucess", async (req, res) => {
-    console.log("reqqq", req.user);
+    // console.log("reqqq", req.user);
 
     if (req.user) {
         res.status(200).json({message: "User Logged in", user: req.user});
@@ -128,9 +129,9 @@ app.post("/search", async (req, res, next) => {
 
         const contacts = await userdb.find({
             $and: [
-                {_id: {$ne: req.user.id}},
+                {_id: {$ne: req.user._id}},
                 {
-                    $or: [{displayName: regex}, {email: regex}],
+                    $or: [{displayName: regex}, {email: regex}]
                 }
             ]
         })
@@ -140,10 +141,16 @@ app.post("/search", async (req, res, next) => {
         console.log(e);
         return res.status(500).send("Internal Server Error");
     }
-})
+});
 
-app.listen(PORT, () => {
-    console.log(`server start at port no ${PORT}`)
-})
+const server =
+    app.listen(process.env.PORT, () => {
+        console.log(`Listening on port ${process.env.PORT}`);
+    })
+
+setupSocket(server);
+// app.listen(PORT, () => {
+//     console.log(`server start at port no ${PORT}`)
+// })
 
 

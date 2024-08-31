@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b41a7b8c-aa16-4578-ade6-2539d22a21c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/new-dm/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/Models/messageSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/socket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/Context/SocketContext.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Auth/auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Auth/auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/profile-info/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/profile-info/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/empty-chat-containers/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/empty-chat-containers/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/chat-header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/chat-header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/message-bar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/message-bar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/new-dm/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/contacts-container/components/new-dm/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Profile/profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/store/slices/chat-slice.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/store/slices/chat-slice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +127,9 @@
       <workItem from="1724899830331" duration="4280000" />
       <workItem from="1724917908373" duration="8867000" />
       <workItem from="1724985859529" duration="5654000" />
-      <workItem from="1725029342802" duration="6239000" />
+      <workItem from="1725029342802" duration="13260000" />
+      <workItem from="1725093094733" duration="222000" />
+      <workItem from="1725093468215" duration="8102000" />
     </task>
     <servers />
   </component>

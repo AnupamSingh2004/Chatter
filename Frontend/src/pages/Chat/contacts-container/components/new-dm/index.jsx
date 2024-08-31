@@ -15,9 +15,11 @@ import {ScrollArea} from "@/components/ui/scroll-area.jsx";
 import {Avatar} from "@radix-ui/react-avatar";
 import {AvatarImage} from "@/components/ui/avatar.jsx";
 import {getColor} from "@/lib/utils.js";
+import {useAppStore} from "@/store/index.js";
 
 export const NewDm = () => {
 
+    const {setSelectedChatType, setSelectedChatData} = useAppStore();
     const [openNewContactModal, setOpenNewContactModal] = useState(false);
     const [searchedContacts, setSearchedContacts] = useState([]);
     const searchContacts = async (searchTerm) => {
@@ -41,6 +43,8 @@ export const NewDm = () => {
 
     const selectNewContact = async (contact) => {
         setOpenNewContactModal(false);
+        setSelectedChatType("contact");
+        setSelectedChatData(contact);
         setSearchedContacts([]);
     }
     return (
