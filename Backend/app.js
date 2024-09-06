@@ -9,6 +9,7 @@ const passport = require("passport");
 const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 const userdb = require("./Models/userSchema");
 const setupSocket = require("./socket.js");
+const Message = require('./Models/messageSchema');
 
 const clientid = process.env.CLIENT_ID
 const clientsecret = process.env.CLIENT_SECRET
@@ -142,6 +143,28 @@ app.post("/search", async (req, res, next) => {
         return res.status(500).send("Internal Server Error");
     }
 });
+
+app.post("/get-messages", async (req, res) => {
+    try {
+        const user1 = req.userId;
+        const user2 = req.body.id;
+
+        if (!user1 || !user2) {
+            return res.status(404).json({message: "User not found"});
+        }
+
+        const messages = await Message.find({
+            $or: [{sender: user1, recipient: user2}, {sender: user2, recipient: user1}]
+
+        }).sort({timestamp: 1});
+        return res.status(200).json({messages});
+
+    } catch (e) {
+        console.log(e);
+        res.status(500).send("Internal Server Error");
+
+    }
+})
 
 const server =
     app.listen(process.env.PORT, () => {

@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b41a7b8c-aa16-4578-ade6-2539d22a21c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Models/messageSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Models/messageSchema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/socket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/Context/SocketContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/Context/SocketContext.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/message-bar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/message-bar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/message-container/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/pages/Chat/chat-containers/components/message-container/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +118,7 @@
       <workItem from="1725093468215" duration="8102000" />
       <workItem from="1725546520463" duration="5781000" />
       <workItem from="1725640815144" duration="1553000" />
-      <workItem from="1725643478571" duration="2874000" />
+      <workItem from="1725643478571" duration="4288000" />
     </task>
     <servers />
   </component>

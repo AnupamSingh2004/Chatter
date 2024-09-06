@@ -2,7 +2,24 @@ import {useAppStore} from "@/store/index.js";
 
 export const MessageContainer = () => {
     const scrollRef = useRef();
-    const {selectedChatType, selectedChatData, userInfo, selectedChatMessages} = useAppStore();
+    const {selectedChatType, selectedChatData, userInfo, selectedChatMessages, setSelectedChatMessages} = useAppStore();
+
+    useEffect(() => {
+        const getMessages = async () => {
+            try {
+                const response = await axios.post('http://localhost:6005/get-messages', {id: selectedChatData._id}, {withCredentials: true});
+                if (response.data.messages) {
+                    setSelectedChatMessages(response.data.messages);
+                }
+            } catch (e) {
+                console.log({e});
+            }
+        }
+
+        if (selectedChatData._id) {
+            if (selectedChatType === "contact") getMessages();
+        }
+    }, [selectedChatData, selectedChatType, setSelectedChatMessages]);
 
     useEffect(() => {
         if (scrollRef.current) {
@@ -54,3 +71,4 @@ export const MessageContainer = () => {
 import {useEffect, useRef} from "react";
 
 import moment from "moment";
+import axios from "axios";
