@@ -1,13 +1,13 @@
 const SocketIOServer = require('socket.io').Server;
 
-const Message = require('./Models/messageSchema.js');
+const Message = require('./Models/messageSchema');
 
 
 const setUpSocket = (server) => {
     const io = new SocketIOServer(server, {
         cors: {
             origin: "http://localhost:5173",
-            methods: ["GET", "POST"],
+            methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
             credentials: true
         }
     });
@@ -34,11 +34,11 @@ const setUpSocket = (server) => {
         const messageData = await Message.findById(createdMessage._id).populate("sender", "id email displayName image color").populate("recipient", "id email displayName image color");
 
         if (recipientSocketId) {
-            io.to(recipientSocketId).emit("recieveMessage", messageData);
+            io.to(recipientSocketId).emit("receiveMessage", messageData);
         }
 
         if (senderSocketId) {
-            io.to(senderSocketId).emit("recieveMessage", messageData);
+            io.to(senderSocketId).emit("receiveMessage", messageData);
         }
     }
 
@@ -53,7 +53,7 @@ const setUpSocket = (server) => {
             console.log(`User id not provided during connection`);
         }
 
-        socket.on("sendMessage", () => sendMessage(message));
+        socket.on("sendMessage", sendMessage);
         socket.on("disconnect", () => disconnect(socket))
     });
 };

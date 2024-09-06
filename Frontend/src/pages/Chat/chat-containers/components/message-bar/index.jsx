@@ -35,7 +35,7 @@ export const MessageBar = () => {
     const handleSendMessage = async () => {
         if (selectedChatType === "contact") {
             socket.emit("sendMessage", {
-                sender: userInfo.id,
+                sender: userInfo._id,
                 content: message,
                 recipient: selectedChatData._id,
                 messageType: "text",
