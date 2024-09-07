@@ -7,7 +7,14 @@ export const MessageContainer = () => {
     useEffect(() => {
         const getMessages = async () => {
             try {
-                const response = await axios.post('http://localhost:6005/get-messages', {id: selectedChatData._id}, {withCredentials: true});
+                // console.log(userId);
+                // console.log(selectedChatData._id)
+
+
+                const response = await axios.post('http://localhost:6005/getMessages', {
+                    user1: userInfo._id,
+                    user2: selectedChatData._id
+                }, {withCredentials: true});
                 if (response.data.messages) {
                     setSelectedChatMessages(response.data.messages);
                 }

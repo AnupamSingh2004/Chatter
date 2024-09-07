@@ -144,17 +144,23 @@ app.post("/search", async (req, res, next) => {
     }
 });
 
-app.post("/get-messages", async (req, res) => {
+app.post("/getMessages", async (req, res) => {
     try {
-        const user1 = req.userId;
-        const user2 = req.body.id;
+        // const user1 = req.body.id1;
+        // const user2 = req.body.id;
 
-        if (!user1 || !user2) {
-            return res.status(404).json({message: "User not found"});
+        const {user1, user2} = req.body;
+
+
+        if (!user1) {
+            return res.status(404).json({message: "User1 not found"});
+        }
+        if (!user2) {
+            return res.status(404).json({message: "User2 not found"});
         }
 
         const messages = await Message.find({
-            $or: [{sender: user1, recipient: user2}, {sender: user2, recipient: user1}]
+            $or: [{sender: user1, recipient: user2}, {sender: user2, recipient: user1}],
 
         }).sort({timestamp: 1});
         return res.status(200).json({messages});
@@ -172,8 +178,5 @@ const server =
     })
 
 setupSocket(server);
-// app.listen(PORT, () => {
-//     console.log(`server start at port no ${PORT}`)
-// })
 
 
