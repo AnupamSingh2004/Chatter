@@ -7,7 +7,7 @@ export const EmptyChatContainers = () => {
             className="text-opacity-80 text-white flex flex-col gap-5 items-center mt-10 lg:text-4xl transition-all duration-300">
             <h3 className={"poppins-medium"}>
                 Hi<span className={"text-orange-400"}>!</span> Welcome to
-                <span className={"text-orange-400"}> Chatter</span> Chat App
+                <span className={"text-orange-400"}> Chatter</span> the Chat App
                 <span className={"text-orange-400"}>.</span>
             </h3>
         </div>

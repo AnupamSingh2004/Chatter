@@ -82,7 +82,6 @@ app.get("/auth/google/callback", passport.authenticate("google", {
 
 
 app.get("/login/sucess", async (req, res) => {
-    // console.log("reqqq", req.user);
 
     if (req.user) {
         res.status(200).json({message: "User Logged in", user: req.user});
@@ -171,6 +170,7 @@ app.post("/getMessages", async (req, res) => {
 
     }
 })
+
 
 const server =
     app.listen(process.env.PORT, () => {

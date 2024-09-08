@@ -60,7 +60,6 @@ function App() {
 
 
                     }/>
-                    {/*<Route path="*" element={<Auth/>}/>*/}
                     <Route path={"/profile"} element={
 
                         <Profile/>

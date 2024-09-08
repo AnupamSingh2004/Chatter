@@ -1,4 +1,8 @@
 import {useAppStore} from "@/store/index.js";
+import {useEffect, useRef} from "react";
+import moment from "moment";
+import axios from "axios";
+
 
 export const MessageContainer = () => {
     const scrollRef = useRef();
@@ -7,10 +11,6 @@ export const MessageContainer = () => {
     useEffect(() => {
         const getMessages = async () => {
             try {
-                // console.log(userId);
-                // console.log(selectedChatData._id)
-
-
                 const response = await axios.post('http://localhost:6005/getMessages', {
                     user1: userInfo._id,
                     user2: selectedChatData._id
@@ -75,7 +75,3 @@ export const MessageContainer = () => {
         </div>
     )
 }
-import {useEffect, useRef} from "react";
-
-import moment from "moment";
-import axios from "axios";

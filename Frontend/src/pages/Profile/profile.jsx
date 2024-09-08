@@ -5,7 +5,6 @@ import {Avatar} from "@radix-ui/react-avatar";
 import {AvatarImage} from "@/components/ui/avatar.jsx";
 import {useEffect, useRef, useState} from "react";
 import {colors, getColor} from "@/lib/utils.js";
-import {selectUserEmail} from "@/store/selectors/userEmail.js";
 import {useAppStore} from "@/store/index.js";
 import {useNavigate} from "react-router-dom";
 import {FaPlus, FaTrash} from "react-icons/fa";
@@ -29,10 +28,12 @@ const Profile = () => {
 
 
     useEffect(() => {
+
         if (userInfo) {
             setFirstName(userInfo.displayName);
             setSelectedColor(userInfo.color);
         }
+
 
     }, [userInfo]);
 
@@ -105,13 +106,6 @@ const Profile = () => {
     const handleDeleteImage = async (event) => {
 
     }
-    // const {userInfo} = useAppStore();
-    // const userData = useRecoilState(userState);
-
-
-    // const userEmail = useRecoilState(selectUserEmail);
-    // console.log(userEmail);
-
 
     return <div className={"bg-[#1b1c24] h-[100vh] flex items-center justify-center flex-col gap-10"}>
         <div className={"flex flex-col gap-10 w-[80vw] md:w-max"}>
